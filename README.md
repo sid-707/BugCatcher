@@ -16,6 +16,10 @@ Tool for identifying types of bugs
 
 Run `docker compose up` to run the backend locally. Go to [localhost:3000](http://localhost:3000/) to see the app.
 
+[Install gcloud CLI](https://cloud.google.com/sdk/docs/install)
+
+Run `gcloud app deploy` to deploy the app.
+
 # Architecture
 
 e.g. Frontend (react) allows photo upload. Photo is sent to backend for ML analysis. Response sent back to frontend.
