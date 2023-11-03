@@ -1,16 +1,37 @@
 <!DOCTYPE html>
-<htm lang="en">
-    <head>
-        <script src="https://unpkg.com/htmx.org@1.9.6" integrity="sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <div class="visual">
-
-        </div>
-        <button hx-get="http://localhost:8080" hx-swap="outerHTML" hx-target="visual">
-            Click here
+<html>
+  <head>
+    <title>Pokedex Image Upload</title>
+    <link rel="stylesheet" href="pokedex.css" />
+    <script
+      src="https://unpkg.com/htmx.org@1.9.6"
+      integrity="sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="pokedex">
+      <div class="blue-light"></div>
+      <div class="screen">
+        <img
+          id="uploadedImage"
+          src="pokedex_placeholder.png"
+          alt="Pokedex Screen"
+        />
+      </div>
+      <div class="controls">
+        <button
+          hx-post="/upload"
+          hx-target="#uploadedImage"
+          hx-swap="src"
+          class="button"
+        >
+          Upload Image
         </button>
-        
-    </body>
-
+        <button hx-post="/other-action" class="button">Another Action</button>
+        <!-- Add more buttons as needed -->
+      </div>
+    </div>
+    <script src="https://unpkg.com/htmx.org@1.7.2/dist/htmx.min.js"></script>
+  </body>
 </html>
