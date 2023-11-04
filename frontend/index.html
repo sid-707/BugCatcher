@@ -21,14 +21,16 @@
         />
       </div>
       <div class="controls">
-        <button
-          hx-post="/upload"
-          hx-target="#uploadedImage"
-          hx-swap="src"
-          class="button"
-        >
-          Upload Image
-        </button>
+        <form action="">
+          <input
+            type="file"
+            id="myFile"
+            name="filename"
+            accept="image/*;capture=camera"
+            hidden
+          />
+        </form>
+        <label for="myFile" class="button">Upload Image</label>
         <button hx-post="/other-action" class="button">Another Action</button>
         <!-- Add more buttons as needed -->
       </div>
