@@ -1,11 +1,13 @@
 FROM node:20
 
-WORKDIR /usr/src/app
+RUN npm i -g pnpm
+
+WORKDIR /app
 
 COPY package.json ./
 
-RUN npm install
+RUN pnpm install
 
 COPY . .
 
-CMD ["npm", "run", "start:dev"]
+CMD ["pnpm", "run", "start:dev"]
