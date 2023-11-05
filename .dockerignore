@@ -4,6 +4,6 @@
 .git
 .github
 .dockerignore
-.gcloudignore
+*/.gcloudignore
 README.md
 */test

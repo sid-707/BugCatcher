@@ -16,7 +16,11 @@ Tool for identifying types of bugs
 
 Run `docker compose up` to run the backend locally. Go to [localhost:3000](http://localhost:3000/) to see the app.
 
+# Deploying the Backend
+
 [Install gcloud CLI](https://cloud.google.com/sdk/docs/install)
+
+`cd` into the backend folder.
 
 Run `gcloud app deploy` to deploy the app.
 
