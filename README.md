@@ -20,6 +20,8 @@ Run `docker compose up` to run the backend locally. Go to [localhost:3000](http:
 
 Run `gcloud app deploy` to deploy the app.
 
+Run `gcloud app browse` to open the app in the browser.
+
 # Architecture
 
 e.g. Frontend (react) allows photo upload. Photo is sent to backend for ML analysis. Response sent back to frontend.
