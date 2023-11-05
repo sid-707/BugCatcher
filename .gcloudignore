@@ -1,0 +1,11 @@
+.git
+.github
+.gcloudignore
+.dockerignore
+docker-compose.yaml
+Dockerfile
+README.md
+test
+node_modules
+dist
+*.md
