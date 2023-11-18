@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Detector</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Additional styles if needed */
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="container mx-auto p-4">
+        <div class="flex flex-col items-center justify-center min-h-screen">
+            <h1 id="mainTitle" class="text-5xl font-bold mb-2">Big Title Here</h1>
+            <p id="description" class="text-lg mb-4">
+                Smaller Descriptive Text Here<br>
+                Maybe two lines<br>
+                Maybe 3
+            </p>
+            <div id="imageContainer" class="w-full max-w-lg rounded overflow-hidden shadow-lg bg-gray-800 mb-4 p-4">
+                <!-- Placeholder for the abstract animal image -->
+                <div class="bg-gray-700 h-64 w-full mb-4"></div>
+                <p id="animalFeedback" class="text-green-400">AI feedback will appear here.</p>
+            </div>
+            <input type="file" id="fileInput" class="hidden" accept="image/*">
+            <button id="uploadButton" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                Upload a Picture
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript code to handle file upload and AI feedback
+        document.getElementById('uploadButton').addEventListener('click', function() {
+            document.getElementById('fileInput').click();
+        });
+
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                // Placeholder for AI detection logic
+                const detectedAnimal = 'Cat'; // This should be replaced with actual AI detection
+                const abstractImageUrl = `https://source.unsplash.com/featured/?${detectedAnimal}`;
+
+                // Update UI with AI feedback and abstract image
+                document.getElementById('mainTitle').textContent = `${detectedAnimal} Detected`;
+                document.getElementById('description').textContent = `Description for a ${detectedAnimal}`;
+                document.getElementById('animalFeedback').textContent = `The AI detects a ${detectedAnimal} in the uploaded photo.`;
+                document.getElementById('imageContainer').style.backgroundImage = `url(${abstractImageUrl})`;
+            }
+        });
+    </script>
+</body>
+</html>
