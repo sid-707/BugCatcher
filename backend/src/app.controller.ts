@@ -1,17 +1,22 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Post, Render, UploadedFile, UseInterceptors } from '@nestjs/common';
 import { AppService } from './app.service';
+import { FileInterceptor } from '@nestjs/platform-express';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(private readonly appService: AppService) { }
 
   @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  @Render('index')
+  root() {
+    console.log("FRONTEND CREATED")
+    return {};
   }
 
-  @Get('/upload')
-  uploadFile(): string {
-    return 'upload file here'
+  @Post('upload')
+  @UseInterceptors(FileInterceptor('file'))
+  uploadFile(@UploadedFile() file: Express.Multer.File) {
+    console.log(file);
+    return '<div>IMAGE OF BUG</div>'
   }
 }
