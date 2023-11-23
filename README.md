@@ -22,6 +22,9 @@ Run `docker compose up` to run the backend locally. Go to [localhost:3000](http:
 
 `cd` into the backend folder.
 
+You would have to be added to the project before you do this:
+Run `gcloud config set project <PROJECT_ID>`
+
 Run `gcloud app deploy` to deploy the app.
 
 Run `gcloud app browse` to open the app in the browser.
