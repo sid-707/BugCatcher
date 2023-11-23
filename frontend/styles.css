@@ -1,13 +1,24 @@
-.catcher {
-    background-color: #611fff;
-    border: 2px solid #000;
-    width: 300px;
-    height: 400px;
+/* ECE3CE 739072 4F6F52 3A4D39*/
+
+body {
+    background-color: #ECE3CE;
+}
+main {
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    width: 500px;
+    height: 600px;
     margin: 50px auto;
-    border-radius: 10px;
+    border-radius: 32px;
     display: flex;
     flex-direction: column;
     position: relative;
+    padding: 2%;
+}
+
+.title {
+    font-weight: bold;
+    font-size: larger;
 }
 
 .screen {
@@ -15,7 +26,18 @@
     border: 1px solid #000;
     flex-grow: 1;
     margin: 10px;
-    border-radius: 5px;
+    border-radius: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload-button {
+    @apply font-bold py-2 px-4 rounded bg-lime-600;
+    height: 80px;
+    width: 120px;
+    border-radius: 32px;
+    color: white;
 }
 
 .blue-light {
