@@ -12,6 +12,10 @@ Tool for identifying types of bugs
     - [ ] Create designs (figma, AI generated)
     - [ ] Write feature tickets
 
+# Starting the project
+
+Run `docker compose up` to run the backend locally. Go to [localhost:3000](http://localhost:3000/) to see the app.
+
 # Architecture
 
 e.g. Frontend (react) allows photo upload. Photo is sent to backend for ML analysis. Response sent back to frontend.
