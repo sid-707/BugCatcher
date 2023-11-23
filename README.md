@@ -26,6 +26,8 @@ Run `gcloud app deploy` to deploy the app.
 
 Run `gcloud app browse` to open the app in the browser.
 
+Go to `https://bugcatcher-404002.uc.r.appspot.com/` for the app on line.
+
 # Architecture
 
 e.g. Frontend (react) allows photo upload. Photo is sent to backend for ML analysis. Response sent back to frontend.
