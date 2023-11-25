@@ -16,6 +16,8 @@ Tool for identifying types of bugs
 
 Run `docker compose up` to run the backend locally. Go to [localhost:3000](http://localhost:3000/) to see the app.
 
+MVC documentation `https://docs.nestjs.com/techniques/mvc`
+
 # Deploying the Backend
 
 [Install gcloud CLI](https://cloud.google.com/sdk/docs/install)

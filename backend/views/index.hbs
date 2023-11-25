@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insect Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/htmx.org"></script> <!-- Include HTMX -->
+    <style>
+        /* Additional styles if needed */
+    </style>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+        <div class="mb-4">
+            <h1 class="text-2xl text-blue-600 font-bold" id="insectName">insect_name</h1>
+            <p class="text-gray-700 mt-2" id="templateDescription">template description</p>
+            <p class="text-gray-500 text-sm" id="longDescription">something something something long</p>
+        </div>
+        <div class="mb-4">
+            <img id="insectImage" src="https://via.placeholder.com/400x300" alt="Insect Image"
+                class="w-full h-auto rounded-lg" />
+        </div>
+        <div>
+            <input type="file" id="imageUploader" class="hidden" hx-post="https://localhost:3000/upload"
+                hx-swap="outerHTML" hx-target="#insectImage" />
+            <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+                onclick="document.getElementById('imageUploader').click()">
+                Button to upload image
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
