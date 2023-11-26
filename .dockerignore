@@ -1,9 +1,9 @@
-*/node_modules
+node_modules
 *.md
-*/dist
+dist
 .git
 .github
 .dockerignore
-*/.gcloudignore
+.gcloudignore
 README.md
-*/test
+test
